@@ -54,12 +54,27 @@
   </build>
 
     <distributionManagement>
-        <repository>
+        <snapshotRepository>
             <id>github</id>
             <name>GitHub Wraeven Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/Wraeven/WraeLibrary</url>
-        </repository>
+        </snapshotRepository>
     </distributionManagement>
+
+  <repositories>
+      <repository>
+          <id>papermc-repo</id>
+          <url>https://repo.papermc.io/repository/maven-public/</url>
+      </repository>
+      <repository>
+          <id>sonatype</id>
+          <url>https://oss.sonatype.org/content/groups/public/</url>
+      </repository>
+      <repository>
+          <id>github</id>
+          <url>https://maven.pkg.github.com/Wraeven/WraeLibrary</url>
+      </repository>
+  </repositories>
 
   <dependencies>
       <dependency>
