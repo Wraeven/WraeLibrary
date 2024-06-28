@@ -31,18 +31,6 @@
           <target>${java.version}</target>
         </configuration>
       </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>3.3.0</version>
-            <configuration>
-                <archive>
-                    <manifest>
-                        <mainClass>me.wraeven.wraelibrary.WraeLibrary</mainClass>mvn
-                    </manifest>
-                </archive>
-            </configuration>
-        </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
@@ -72,17 +60,6 @@
             <url>https://maven.pkg.github.com/Wraeven/WraeLibrary</url>
         </repository>
     </distributionManagement>
-
-  <repositories>
-      <repository>
-          <id>papermc-repo</id>
-          <url>https://repo.papermc.io/repository/maven-public/</url>
-      </repository>
-      <repository>
-          <id>sonatype</id>
-          <url>https://oss.sonatype.org/content/groups/public/</url>
-      </repository>
-  </repositories>
 
   <dependencies>
       <dependency>
