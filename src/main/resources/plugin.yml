@@ -1,0 +1,4 @@
+name: WraeLibrary
+version: '${version}'
+main: me.wraeven.wraelibrary.WraeLibrary
+api-version: '1.20'
