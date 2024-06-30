@@ -1,7 +1,9 @@
 package me.wraeven.wraelibrary;
 
+import lombok.Getter;
 import me.wraeven.wraelibrary.events.LibEvents;
 import me.wraeven.wraelibrary.files.FileHandler;
+import me.wraeven.wraelibrary.gui.MenuHolder;
 import me.wraeven.wraelibrary.lib.WraePlayerHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -14,6 +16,7 @@ import java.util.UUID;
 
 public final class WraeLibrary extends JavaPlugin {
 
+    @Getter
     private final WraePlayerHandler handler;
     private final LibEvents events;
     private final FileHandler fileHandler;
@@ -51,8 +54,5 @@ public final class WraeLibrary extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
         fileHandler.savePlayers();
-    }
-    public WraePlayerHandler getHandler() {
-        return handler;
     }
 }
