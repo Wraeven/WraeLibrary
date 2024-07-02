@@ -15,13 +15,15 @@ import java.util.List;
 import java.util.UUID;
 
 public final class WraeLibrary extends JavaPlugin {
-
+    @Getter
+    private static WraeLibrary instance;
     @Getter
     private final WraePlayerHandler handler;
     private final LibEvents events;
     private final FileHandler fileHandler;
 
     public WraeLibrary() {
+        instance = this;
         this.handler = new WraePlayerHandler();
         this.events = new LibEvents(handler);
         this.fileHandler = new FileHandler(this, handler);
