@@ -56,5 +56,6 @@ public final class WraeLibrary extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
         fileHandler.savePlayers();
+        instance = null;
     }
 }
