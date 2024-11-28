@@ -1,13 +1,11 @@
 package me.wraeven.wraelibrary.files;
 
-import me.wraeven.wraelibrary.WraeLibrary;
 import me.wraeven.wraelibrary.WraePlayer;
 import me.wraeven.wraelibrary.lib.WraePlayerHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,9 +24,10 @@ public class FileHandler {
         this.playerHandler = handler;
         createPlayers();
     }
+
     public void createPlayers() {
         players = new File(plugin.getDataFolder(), "players.yml");
-        if(!players.exists()) {
+        if (!players.exists()) {
             try {
                 players.getParentFile().mkdirs();
                 players.createNewFile();
@@ -39,8 +38,9 @@ public class FileHandler {
         }
         playersConfig = YamlConfiguration.loadConfiguration(players);
     }
+
     public void savePlayers() {
-        for(WraePlayer pl: playerHandler.getPlayers().values()) {
+        for (WraePlayer pl : playerHandler.getPlayers().values()) {
             playersConfig.set("Players." + pl.getPlayer().getUniqueId() + ".Name", pl.getName());
             playersConfig.set("Players." + pl.getPlayer().getUniqueId() + ".Stats.Wins", pl.getPlayerStats().getWins());
             playersConfig.set("Players." + pl.getPlayer().getUniqueId() + ".Stats.Games_Played", pl.getPlayerStats().getGamesPlayed());
@@ -51,6 +51,7 @@ public class FileHandler {
             Bukkit.getLogger().severe("Failure to save players.yml in Plugin: " + plugin.getName());
         }
     }
+
     public void savePlayer(WraePlayer Offline, UUID player) {
         playersConfig.set("Players." + player + ".Name", Offline.getName());
         playersConfig.set("Players." + player + ".Stats.Wins", Offline.getPlayerStats().getWins());

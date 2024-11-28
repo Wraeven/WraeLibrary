@@ -35,7 +35,8 @@ public class WraePlayerHandler {
     public WraePlayer getPlayer(Player player) {
         if (!exists(player)) {
             addPlayer(player);
-            Bukkit.getLogger().warning("Player " + player.getName() + " was created through the getPlayer Method.");
+            Bukkit.getLogger().warning("Player " + player.getName() + " was created through the Online getPlayer Method.");
+            Bukkit.getLogger().warning("This infers that the onJoin method is functioning incorrectly.");
         }
         return players.get(player.getUniqueId());
     }

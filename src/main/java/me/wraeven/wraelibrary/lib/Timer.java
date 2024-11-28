@@ -1,15 +1,11 @@
 package me.wraeven.wraelibrary.lib;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
 public class Timer {
-    @Setter
     private int time;
-    @Getter
     private String formattedTime;
     private final Plugin plugin;
     private BukkitTask task;

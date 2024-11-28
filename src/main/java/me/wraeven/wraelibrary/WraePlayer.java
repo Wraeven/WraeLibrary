@@ -19,12 +19,10 @@ public class WraePlayer {
         playerStats = new Stats(player, FileHandler.playersConfig);
     }
 
-    public OfflinePlayer getPlayer() {
-        return player;
-    }
     public String getName() {
         return player.getName();
     }
-    public Stats getPlayerStats() {return playerStats;}
 
+    public OfflinePlayer getPlayer() {return player;}
+    public Stats getPlayerStats() {return playerStats;}
 }

@@ -1,8 +1,6 @@
 package me.wraeven.wraelibrary.events;
 
-import me.wraeven.wraelibrary.WraeLibrary;
 import me.wraeven.wraelibrary.lib.WraePlayerHandler;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -40,6 +38,7 @@ public class LibEvents implements Listener {
         }
 
     }
+
     public HashMap<UUID, Long> getPlayerLogoutTimes() {
         return playerLogoutTimes;
     }
