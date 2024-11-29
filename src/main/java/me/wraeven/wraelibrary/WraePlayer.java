@@ -8,10 +8,14 @@ import org.bukkit.entity.Player;
 public class WraePlayer {
     private final OfflinePlayer player;
 
-    private final Stats playerStats;
+    private Stats playerStats;
 
     public WraePlayer(Player player) {
         this.player = player;
+        initialize();
+    }
+
+    protected void initialize() {
         if(!player.hasPlayedBefore()) {
             playerStats = new Stats();
             return;
